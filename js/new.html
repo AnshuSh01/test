@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1 id="head">Welcome to free blog site</h1>
+    <p id="yellow">Thanks for visiting the site</p>
+
+    <h2 id="next">What is the site for?</h2>
+    <h5>This site can be used for:</h5>
+    <div>
+    
+        <ol>
+           <li> Take me to home page</li>
+       
+            <li>Login for information</li> 
+        
+      
+            <li> Take you in google site</li> 
+        </ol>
+    </div>
+
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    
+    <div class ="form">
+        <h2>Please login to your blog</h2>
+        <div class="form1">
+        <div class="new1">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Your email">
+
+        </div>
+        <div  class="new1">
+           <label for="Password">Password</label>
+           <input type="password" placeholder="Enter your password">
+        </div>
+        <div id="login">
+            <input  id="hov" type="button" value="Login">
+        </div>
+    </div>
+        
+        <div>
+            <h4>Comments? Send your feedback</h4>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    
+</body>
+<style>
+    *{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: rgb(216, 238, 241);
+    }
+    h1,h2{
+        text-align: center;
+    }
+    .form{
+        border: 2px solid salmon;
+        width: 500px;
+    }
+    .form1{
+        display:flex;
+        flex-direction: row;
+
+      
+    }
+    #head{
+        border: black solid 2px;
+        width: 400px;
+        text-align: center;
+       
+    }
+    #next{
+        border: red solid 2px;
+        width: 400px;
+        text-align: center;
+        
+    }
+    #yellow{
+        background-color: yellow;
+        border: 2px solid yellow    ;
+        width: 400px;
+    }
+    .new1{
+        padding: 30px;
+    }
+    #login{
+        padding-top: 25px;
+    }
+    #hov:hover{
+        background-color: rgb(164, 84, 84);
+        color: white;
+
+    }
+    #hov{
+     
+        background-color: rgb(235, 102, 102);
+        color: white;
+        border-radius: 8px;
+        padding: 3px;
+        margin: 5px;
+    }
+    
+</style>
+</html>

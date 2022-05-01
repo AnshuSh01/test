@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="phone.css">
+
+
+    <title>Welcome</title>
+    <style>
+        /* CSS reset */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Css Variables */
+        /* we can Used for Store the height of navbar and we can provide marging and other operatons */
+        /* example 
+:root{
+    --navbar-height:50px
+ } */
+        /* NAVIGATION BAR */
+        
+        #navbar {
+            font-family: "Baloo Bhai 2", cursive;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+        
+        #logo {
+            margin: 10px 34px;
+        }
+        
+        #logo img {
+            margin: 3px 6px;
+            height: 60px;
+            opacity: 1;
+        }
+        
+        #navbar ul {
+            display: flex;
+        }
+        
+        #navbar ul li {
+            font-size: 1.3rem;
+            list-style: none;
+            display: block;
+        }
+        
+        #navbar ul a {
+            display: block;
+            text-decoration: none;
+            border-radius: 20px;
+            color: white;
+            padding: 1px 20px;
+        }
+        
+        #navbar ul a:hover {
+            background-color: white;
+            color: black;
+        }
+        /* BACKGROUND PSEUDO SELECTOR */
+        
+        #navbar::before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            opacity: 0.4;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+        }
+        /* HOME */
+        
+        #home {
+            display: flex;
+            padding: 3px 200px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 500px;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        #home::before {
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMKz9RbNm0Z_L8e-Qby39lThrjumEyz_ss1A&usqp=CAU") no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            background-color: black;
+            opacity: 0.9;
+            z-index: -1;
+            height: 606px;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+        }
+        
+        #home h1 {
+            text-align: center;
+        }
+        
+        #home p {
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: rgb(107, 60, 75);
+            color: white;
+            cursor: pointer;
+            margin: 17px;
+            font-size: 1.3rem;
+            border-radius: 10px;
+        }
+        /* Services  */
+        
+        .center {
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        .h-secondary center {
+            font-size: 2.8rem;
+            padding: 18px;
+        }
+        
+        .box h2 {
+            font-size: 2.3rem;
+            padding: 18px;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        .h1-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        #services {
+            margin: 15px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        #services .box {
+            border: 3px solid brown;
+            margin: 3px 25px;
+            padding: 24px;
+            border-radius: 23px;
+            background-color: rgb(235, 209, 177);
+            margin-bottom: 50px;
+        }
+        
+        #services .box img {
+            height: 105px;
+            display: block;
+            margin: auto;
+        }
+        
+        #services .box p {
+            text-align: center;
+            font-family: "Baloo Bhai 2", cursive;
+            font-size: 1.1rem;
+        }
+        /* Clients Section */
+        
+        #client-section {
+            position: relative;
+        }
+        
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('https://cdn.wallpapersafari.com/31/46/VvodDh.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .client-item {
+            padding: 34px;
+        }
+        
+        #clients img {
+            height: 120px;
+        }
+        
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Contact Section */
+        
+        #contact {
+            position: relative;
+        }
+        
+        #contact::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+            background-color: black;
+        }
+        
+        #contact-box input,
+        #contact-box textarea {
+            padding: 0.6rem;
+            width: 100%;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+        
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 34px 0px;
+        }
+        
+        #contact .form-group {
+            font-size: 1.8rem;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        #contact .form-group .inp {
+            font-size: 1.3rem;
+        }
+        
+        #contact .form-group input {
+            cursor: pointer;
+        }
+        
+        #contact .form-group option {
+            font-size: 1.1rem;
+            font-family: "Baloo Bhai 2", cursive;
+        }
+        
+        #contact .form-group select {
+            padding: 3px;
+            font-size: 1rem;
+            font-family: "Baloo Bhai 2", cursive;
+            border-radius: 8px;
+        }
+        
+        #contac-box form {
+            width: 40%;
+        }
+        
+        #contact-box label {
+            font-size: 1.3rem;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: "Baloo Bhai 2", cursive;
+            background-color: black;
+            color: white;
+            padding: 9px 20px;
+        }
+        /* SOCIAL MEDIA */
+        
+        .media-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #social-media a {
+            text-decoration: none;
+            padding: 0px 65px;
+            font-size: 1.4rem;
+            font-family: "Baloo Bhai 2", cursive;
+            color: blue;
+        }
+        
+        #social-media a:hover {
+            color: brown;
+            background-color: white;
+        }
+        
+        @media only screen and (max-width:1100px) {
+            /* NAVIGATION  */
+            #navbar {
+                flex-direction: column;
+            }
+            #navbar ul li a {
+                font-size: 1.1rem;
+                padding: 0px 8px;
+                padding-bottom: 4px;
+            }
+            /* HOME */
+            #home {
+                height: 488px;
+                padding: 0px 28px;
+            }
+            #home p {
+                font-size: 13px;
+            }
+            #home::before {
+                height: 400x;
+            }
+            .btn {
+                padding: 4px 8px;
+                font-size: 13px;
+            }
+            /* UTILITY */
+            .h1-primary {
+                font-size: 26px;
+            }
+            /* SERVICE */
+            #services {
+                flex-direction: column;
+            }
+            #services .box {
+                margin: 2px 0px;
+                margin-bottom: 20px;
+                padding: 3px;
+            }
+            /* CLIENT */
+            #clients {
+                flex-wrap: wrap;
+            }
+            #clients img {
+                width: 60px;
+                padding: 2px 6px;
+                height: auto;
+            }
+            /* CONTACT */
+            #contact-box form {
+                width: 80%;
+            }
+            .media-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://png.pngtree.com/png-clipart/20200826/original/pngtree-vision-logo-design-vector-png-image_5491924.jpg" alt="myWebsite.com" height="80px" width="100px" />
+        </div>
+        <ul>
+            <li class="listitem"><a href="#home">Home</a></li>
+            <li class="listitem"><a href="#services">Courses</a></li>
+            <li class="listitem"><a href="#client-section">Clients</a></li>
+            <li class="listitem"><a href="#contact">Contact</a></li>
+            <!-- <li class="listitem"><label for="Search">Enjoyment</label> -->
+            <!-- <select name="Series" id="series"> -->
+            <!-- <option value="Lucifer">Lucifer</option> -->
+            <!-- <option value="Campus Diary">Campus Diary</option> -->
+            <!-- <option value="Bhokal">Bhokal</option> -->
+            <!-- <option value="Harry Potter">Harry Potter</option> -->
+            </select>
+            </li>
+        </ul>
+
+    </nav>
+    <section id="home">
+        <h1 class="h1-primary">
+            Welcome to Our Website
+        </h1>
+        <p>This Website able to provide courses designed to start you on a path toward future studies in web development and design,</p>
+        <p> no matter how little experience or technical knowledge you currently have. </p>
+        <button class="btn">Register/Sign-in</button>
+    </section>
+    <section class="services-container">
+        <h1 class="h1-primary center">Our Online Cources</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://www.sketchappsources.com/resources/source-image/python-logo.png" alt="Image Not Responding">
+                <h2 class="h-secondary center">Python</h2>
+                <p class="center">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application
+                    Development.
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://thumbs.dreamstime.com/b/web-development-vector-icon-symbol-creative-sign-seo-icons-collection-filled-flat-illustration-computer-mobile-logo-155906362.jpg">
+                <h2 class="h-secondary center">Web Development</h2>
+                <p class="center">Web development refers in general to the tasks associated with developing websites for hosting via intranet or internet. The web development process includes web design, web content development, client-side/server-side scripting,among
+                    other tasks..</p>
+            </div>
+            <div class="box">
+                <img src="https://e7.pngegg.com/pngimages/46/626/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template.png">
+                <h2 class="h-secondary center">C++</h2>
+                <p class="center">C++ is an object-oriented programming (OOP) language that is viewed by many as the best language for creating large-scale applications. C++ is a superset of the C language. A related programming language, Java, is based on C++ .</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Recruiters</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAVFBMVEX///9mZmZjY2NfX19bW1tXV1f8/Pzo6Ohvb29qamrb29vw8PD09PSkpKR6enqHh4fi4uLS0tLGxsaVlZW8vLzMzMy1tbWurq6NjY2bm5uBgYF0dHRc/6yQAAADvklEQVRoge2a2XLkIAxFDQK877v9//852J3MGNKdIKMiNTO5D/3SLk6xSEhCUfSjv00qHqe+V4Gp+VSnICAJy81nLjhjjO8huWpgwE7xKiA2XwRj4blNCuw3tw6Gbc+NfRPMobAZv2CZGANhGwPLeBwGm6cmdguDjWq4YhlMYbCTYKbyINjYwsIaBBstYE03zKlqpUkVgYy3Ns5ysDuh4dZ0myDYaDZ3Vw5hsMpcZlGGwWpXZZjQEggbZVfjhTpYnDFeuBAwnBv+BBmh3LLB5aIOZEDvXK4lZJ2FpGovmez7tnZFWKqWUtZhUsUhqhOmmnFe+6Xuy655OabOUcp+S1Ktql6nzHcVVFvuHACOrdS/+zo+udnzsazY+c15zo7vk7X1QBdDxeHqDfWQ6dIZ6GLsEwDrijg+rIa7K94lwh7vtBuNfpuMyspUPvnm8V3V3qHm9asR9ZCwDHGRTZW0Iw7jM7niF7vlnw15oFPxbDkMwY6NfAb5xZBu4hznVWYa7HHAMOAPcbEHGJG6dHRYTLiXsa/OC0quoYjaabFp58YtPzUgNLZ3zJkyys1l4BzdVpSrDI5rrMM1Kss9JNw9dEI4Xele7bBzPB9hUoiebrq8cr+Ac8JVFgjPPBA65t4dGy1085WIq9fM8byEKmVldC7S3WNEtNuLKWXRWRGuEL2RcVEltILu5hWY7Y3prAgwMbtdb/QQx+TilFc+JmAn5KIK7//AfL9tnb/pXKHsiJArMNVZQvsFzK1P6K94guAWhEEs5mApwlwB9UJJGF4xhuBSpoKYp1HKRJ/v7lzCuA5lwoRx7CHn0M56m/EU4o2Ftsbg/mBImnUjgnfKfPAEOxoT7QYz97rKRLrBWsItgI9pN5gddTOn/JuyrvIQF6uDIc/UC60F7GuDIow5LmCHyg5pve5N0mGLSYvPDzlVlBT9fN1uJloffUg6PefE1FzXStaH9hdPScfQ0m4I8ZR7JasnnbB0TpVIJ4xpMaQ80pgHM6ttzguLamQZyCacol5EFVXlDtsLRnQtYWr9D9E8iaJeYR+iWOk7HXeFP/ded1TrvdI3u2V9vQfilc6U38Ukbndl5T6xFqqSZCm+7y/BqyW5eQ0+24VeY9EOwwLzZ2NzIWBby3JJQT6Fw+bbCZUn9uHiUvTdu4WobKrlh0Ye6bG371LrZVgOMllbu89sXFNxWRfgNC2rWXU0dWmmgGp+3kpWtGui/z7bw8RC1V+osnlL0mrt4k8OS9EM5bJt9Uza1aiK3OWk2K1+P/o/9QuuazK9pg4CqQAAAABJRU5ErkJggg=="
+                    alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="client-item">
+                <img src="https://authy.com/wp-content/uploads/new-microsoft-logo-SIZED-SQUARE-300x297.jpg" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="https://i2.wp.com/orissadiary.com/wp-content/uploads/2021/03/TCS.jpg?fit=400%2C400&ssl=1" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf70H13YWzk9fLCvJYtMowUVw8lwjTDMu36bYDvZ37tb4VeRBvjkqqFQEBT6vZK5MNU38&usqp=CAU" alt="Our client">
+            </div>
+        </div>
+
+    </section><br><br>
+    <section id="contact">
+        <h2 class="h-primary center">Contact Us</h2>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for=""> Student Name</label>
+                    <input type="text" name="name" id="name" placeholder="First Name">
+                    <input type="text" name="name" id="name" placeholder="Middle Name">
+                    <input type="text" name="name" id="name" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="Birthday">Birth</label>
+                    <input type="date" name="Birthday" id="Birthday">
+
+                </div>
+                <div class="form-group">
+                    <label for="Gender">Gender: </label>
+                    <br>
+                    <div class="inp">
+                        Male<input type="radio" name="Gender" id="Gender"> Female <input type="radio" name="Gender" id="Gender"> Other <input type="radio" name="Gender" id="Gender">
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" name="Address" id="Address" placeholder=" Enter Your Address">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter Your Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Courses</label>
+                        <select name="Mycourses" id="Courses">
+                            <option value="">Python</option>
+                            <option value="">Web Develpoment</option>
+                            <option value="">C++</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Additional Comments</label>
+                        <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit Application">
+
+                    </div>
+                    <div class="form-group">
+                        <input type="reset" value="Clear Fields">
+
+                    </div>
+
+            </form>
+            </div>
+    </section>
+    <section id="social-media">
+        <div class="media-box">
+            <div class="image">
+
+
+                <a href="https://www.linkedin.com/in/anshu-sharma-504b25229/" target="_blank">Linkedin</a> </div>
+            <div><a href="https://github.com/AnshuSh01" target="_blank">Github</a></div>
+
+            <div>
+                <a href="https://www.facebook.com/daroga.pandat/" target="_blank">Facebook
+                </a>
+            </div>
+            <div><a href="https://www.instagram.com/anshu__pandat__01/?hl=en" target="_blank">Instagram</a>
+            </div>
+            <div><a href="mailto:anshush0609@gmail.com" target="_blank">E-mail</a>
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+    <footer class="footer">
+        copyright &copy; Mywebsite.com. All Rights Reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

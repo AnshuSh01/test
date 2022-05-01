@@ -1,0 +1,167 @@
+     /* NAVBAR */
+     
+     #navbar {
+         align-items: center;
+         justify-content: center;
+     }
+     
+     #navbar ul li {
+         font-size: 0.7rem;
+     }
+     
+     #navbar ul a {
+         padding: 10px 9px;
+         margin: 1px 5px;
+     }
+     /* HOME */
+     
+     #home {
+         display: flex;
+         flex-direction: column;
+         font-size: 1rem;
+     }
+     
+     #home .item {
+         text-align: center;
+         padding: 2px;
+     }
+     
+     .btn {
+         font-size: 0.9rem;
+     }
+     
+     .container-items .items {
+         padding: 5px 10px;
+     }
+     
+     .container-items .image {
+         width: 30px;
+         height: 30px;
+     }
+     /* ABOUT */
+     
+     #about {
+         display: block;
+         font-size: 0.9rem;
+         padding-left: 6px;
+         text-align: center;
+     }
+     
+     #about .item {
+         display: block;
+     }
+     
+     .myimage {
+         display: none;
+     }
+     
+     #about .profile-image {
+         width: 200px;
+         height: 200px;
+         display: block;
+     }
+     
+     #about .data {
+         margin-left: 2px;
+     }
+     
+     #about h2.item {
+         padding-bottom: 10px;
+     }
+     /* SKILL */
+     
+     .skills {
+         margin-top: 12px;
+         font-size: 1rem;
+         justify-content: center;
+         align-items: center;
+         margin-right: 0px;
+         margin-left: 0px;
+     }
+     
+     #skill {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     .skill {
+         width: calc(46% - 47px);
+         margin: 15px 0;
+         padding: 0px 17px;
+         padding-left: 20px;
+     }
+     /* EDUCATION */
+     
+     #Education {
+         display: flex;
+         flex-direction: column;
+     }
+     
+     #Education .box {
+         margin: 10px 50px;
+         font-size: 1.1rem;
+     }
+     /* CERTIFICATE */
+     
+     #certificate {
+         flex-wrap: wrap;
+         line-height: 0;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     #certificates .certificate-image {
+         height: 180px;
+         width: 318px;
+     }
+     
+     .certificate-box {
+         box-shadow: none;
+         padding: 14px 40px;
+     }
+     
+     .centre {
+         padding: 10px 0px;
+     }
+     
+     .cert {
+         padding: 16px 0px;
+     }
+     /* CONTACT */
+     
+     #contact-box {
+         padding-left: 12px;
+     }
+     
+     #contact-box label {
+         font-size: 1.2rem;
+         padding-left: 3px;
+     }
+     
+     #contact-me .form-group {
+         font-size: 0.8rem;
+         padding-left: 9px;
+     }
+     
+     #contact-me .form-group input {
+         width: 90%;
+         padding-left: 9px;
+     }
+     
+     #contact-box textarea {
+         width: 90%;
+         padding-left: 9px;
+     }
+     /* CONTACT BEFORE FOOTER */
+     
+     #contact-sticker .social-icon {
+         width: 30px;
+         height: 30px;
+     }
+     /* FOOTER */
+     
+     .footer {
+         padding: 2px 0px;
+     }
